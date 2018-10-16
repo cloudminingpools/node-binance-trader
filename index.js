@@ -321,7 +321,7 @@ start_trading = () => {
     buy_amount = (( ((budget / fixed_buy_price) / parseFloat(stepSize)) | 0 ) * parseFloat(stepSize)).toFixed(precision)
     buy_price = parseFloat(fixed_buy_price)
     console.log(chalk.grey("BUYING " + buy_amount + " OF " + currency_to_buy + " AT FIXED PRICE ") + chalk.green(buy_price.toFixed(tickSize)))
-    client.order({
+    client.orderTest({
       symbol: pair,
       side: 'BUY',
       quantity: buy_amount,
